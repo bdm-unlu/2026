@@ -1,0 +1,59 @@
+[project]
+name = "bdm2026-jupyterlab"
+version = "1.0.0"
+description = "Entorno JupyterLab para la cursada de Bases de Datos Masivas (11088) - UNLu 2026"
+requires-python = ">=3.12,<3.14"
+
+dependencies = [
+    # --- Entorno de notebooks ---
+    "jupyterlab",
+    "ipykernel",
+    "ipywidgets",
+    "nbconvert",
+
+    # --- Manipulación y análisis de datos ---
+    "pandas",
+    "numpy",
+    "scipy",
+    "numexpr",
+    "pyarrow",
+    "openpyxl",
+
+    # --- Visualización ---
+    "matplotlib",
+    "seaborn",
+    "missingno",
+    "plotly",
+    "pyecharts",
+
+    # --- Estadística y machine learning ---
+    "scikit-learn",
+    "statsmodels",
+    "xgboost",
+    "shap",
+    "prince",
+    "pca",
+    "mlxtend",
+    "graphviz",
+
+    # --- Datos geoespaciales ---
+    "geopandas",
+    "geopy",
+    "geoplot",
+    "folium",
+    "shapely",
+    "fiona",
+    "pyproj",
+
+    # --- Dashboards ---
+    "dash",
+    "dash-bootstrap-components",
+    "streamlit",
+    "streamlit-folium",
+
+    # --- Acceso a datos / APIs ---
+    "sqlalchemy",
+    "psycopg[binary]",
+    "requests",
+    "python-dotenv",
+]

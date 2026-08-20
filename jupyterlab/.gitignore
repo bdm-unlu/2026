@@ -1,0 +1,16 @@
+# Entorno virtual de uv
+.venv/
+
+# Cachés de Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.jupyter/
+.virtual_documents/
+
+# Configuración local
+.env
+
+# Datasets pesados (subir sólo los que pide cada TP)
+data/*.parquet
+data/*.zip
