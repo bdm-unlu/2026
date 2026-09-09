@@ -1,0 +1,4 @@
+# Lo que generan los pipelines no se versiona: se regenera ejecutandolos.
+# El .gitignore mantiene la carpeta en el repo.
+*
+!.gitignore

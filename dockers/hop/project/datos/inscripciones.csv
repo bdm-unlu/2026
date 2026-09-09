@@ -1,0 +1,205 @@
+legajo,apellido_nombre,carrera_cod,sede_cod,sexo,fecha_inscripcion,materias_aprobadas,promedio
+10406,"Peralta, Catalina",C03,S1,m,03/08/2026,20,8.09
+10280,"Cardozo, Franco",C02,S2,M,23/08/2026,4,8.96
+10757,"Duarte, Bruno",C01,S2,f,06/03/2023,18,7.07
+10504,"Vera, Facundo",C06,S3,f,20/08/2024,8,"9,45"
+11317,"Quiroga, Sofia", C04,S1,MASCULINO,12/03/2026,6,"6,71"
+11235,"Sosa, Agustin",C04,S2  ,Femenino,16/03/2025,30,8.10
+10974,"Maidana, Mia",C04,S2,masculino,16/03/2025,16,6.07
+11241,"  Cabrera, Santino ",C12,S4,m,08/08/2025,28,4.77
+10493,"Toledo, Valentina",C02,S1,Femenino,02/08/2026,17,"7,70"
+11058,"Barrios, Facundo",C04,S2,m,23/03/2026,12,4.06
+11004,"  Ledesma, Santino ",C01,S2,M,01/03/2023,5,"7,47"
+10906,"Acosta, Bruno", C01,S1,Femenina,04/03/2026,22,"6,48"
+10259,"Escobar, Zoe",C06,S2,m,23/08/2023,2,"8,24"
+10542,"Lucero, Valentina",C03,S2,m,16/08/2023,29,5.06
+10393,"  Escobar, Julieta ",C02,S2  ,femenino,09/08/2026,11,5.83
+11290,"Ibarra, Joaquin",C06,S2,Femenino,06/03/2025,29,"9,35"
+10731,"Arias, Mateo",C06,S1,m,05/03/2025,26,
+11184,"Paredes, Agustin",C04,S4,Femenino,09/08/2023,0,9.29
+10058,"Gimenez, Ramiro",C09,S2  ,F,23/03/2023,3,4.86
+11221,"Suarez, Renata",C02,S1,f,09/08/2025,34,4.96
+10141,"Sosa, Lautaro",C01,S1,femenino,10/03/2025,7,"7,68"
+10331,"Molina, Camila",C06,S1,f,28/08/2024,,"4,77"
+10323,"  Vega, Guadalupe ",C01,S2,Masculino,05/03/2024,4,"7,81"
+10245,"  Ponce, Tomas ", C03,S3,f,20/03/2025,32,6.63
+11101,"Barrios, Julieta",C04,S2,Femenina,21/03/2025,9,7.62
+10133,"  Ferreyra, Delfina ",C01,S1,FEMENINO,06/08/2026,0,4.15
+10177,"Ledesma, Lucia",C04,S1,Femenina,25/08/2024,21,"7,21"
+10569,"  Barrios, Emma ",C01,S2,M,16/03/2025,11,4.22
+10267,"  Escobar, Lautaro ",C01,S4,f,07/08/2025,29,"8,44"
+10022,"Suarez, Zoe", C02,S1  ,m,28/03/2023,13,8.66
+10364,"  Gimenez, Julieta ",C06,S1,M,07/03/2024,13,4.61
+11078,"  Silva, Isabella ",C01,S2,femenino,11/08/2025,22,6.97
+10801,"Segovia, Bruno",C01,S2,Femenino,13/03/2026,34,5.44
+10497,"Alvarez, Julieta",C01,S2,Femenina,18/08/2023,9,"8,98"
+10043,"  Toledo, Thiago ",C03,S1,FEMENINO,26/03/2024,12,4.29
+10871,"Toledo, Guadalupe",C05,S2,F,22/03/2024,20,"6,74"
+11256,"  Ledesma, Franco ",C02,S4,Femenino,13/03/2026,27,"5,42"
+10343,"Ponce, Lautaro",C06,S3,Femenino,15/03/2023,13,6.89
+10106,"Cardozo, Mateo",C01,S1,MASCULINO,22/03/2025,21,5.47
+11155,"Arias, Guadalupe",C01,S1  ,m,10/08/2025,2,7.45
+10672,"  Maidana, Sofia ",C01,S1,MASCULINO,02/03/2025,34,7.57
+10654,"Coronel, Santino",C01,S1,Masculino,12/08/2024,21,"5,68"
+10084,"Villalba, Renata",C07,S2,Femenino,18/03/2024,,8.76
+10486,"Aguirre, Franco",C04,S1,M,19/08/2024,32,7.69
+10212,"  Cabrera, Tomas ",C04,S2,MASCULINO,12/03/2024,5,"4,91"
+11381,"Ponce, Thiago",C03,S2,Femenino,28/03/2025,10,4.88
+10689,"Paredes, Abril",C01,S1  ,F,23/08/2024,25,"4,83"
+10528,"Bustos, Emma",C02,S4,Femenino,08/03/2025,19,"9,60"
+10785,"Escobar, Emma",C01,S1,Femenina,15/03/2023,19,7.82
+11211,"  Peralta, Mateo ",C02,S1,Femenina,09/03/2025,34,6.70
+10925,"Aguirre, Isabella", C01,S4,Masculino,25/08/2025,9,4.51
+11207,"Suarez, Agustin",C02,S2,FEMENINO,08/08/2025,11,"12,30"
+10191,"Rios, Delfina",C06,S1,Femenino,16/08/2023,12,7.53
+10576,"Coronel, Sofia",C01,S1  ,femenino,05/03/2025,4,8.06
+11374,"Arias, Martina",C04,S1,MASCULINO,01/03/2026,25,7.31
+10511,"  Gimenez, Lucia ",C01,S2  ,Femenina,05/08/2025,26,5.34
+11150,"Quiroga, Isabella",C03,S2,m,08/03/2023,1,7.09
+10777,"Segovia, Agustin",C07,S1,Masculino,12/03/2025,18,5.64
+10122,"  Rios, Delfina ",C01,S3,masculino,14/03/2024,28,5.93
+10961,"Segovia, Joaquin", C01,S2,Masculino,03/03/2025,9,4.95
+11345,"Ojeda, Ignacio",C01,S1,m,28/03/2024,5,4.01
+11053,"Gimenez, Nicolas",C02,S4,femenino,16/08/2026,24,6.86
+10583,"Bustos, Guadalupe",C03,S2,FEMENINO,16/08/2025,23,9.01
+10128,"  Gimenez, Emma ",C06,S2,F,25/03/2026,21,6.58
+11116,"  Lucero, Bautista ",C01,S4,F,26/08/2024,0,5.38
+10553,"  Escobar, Isabella ",C01,S3,Femenino,06/08/2023,34,"4,04"
+11295,"  Paredes, Valentina ",C07,S2,Masculino,11/03/2023,23,4.73
+10590,"Miranda, Agustin",C01,S1  ,masculino,04/03/2025,0,"9,15"
+10001,"Paredes, Joaquin", C06,S2,m,19/03/2023,11,4.76
+10297,"Vera, Emma",C06,S2,F,24/08/2024,16,8.92
+10861,"Ojeda, Bruno",C07,S3,FEMENINO,06/08/2025,12,7.14
+10770,"  Acosta, Sofia ",C05,S1  ,M,25/08/2023,25,6.90
+11338,"  Duarte, Renata ",C03,S4,Femenina,01/08/2025,,7.03
+10899,"Zarate, Guadalupe",C07,S1,F,28/03/2025,17,"6,20"
+10035,"Roldan, Delfina",C05,S2,femenino,20/03/2024,22,"9,45"
+10463,"Toledo, Sofia",C02,S1,FEMENINO,21/08/2024,10,
+10854,"  Segovia, Lucia ",C02,S1,masculino,28/08/2026,28,"9,24"
+10693,"Ponce, Thiago",C08,S1,femenino,19/08/2023,31,"4,52"
+11332,"  Molina, Sofia ",C01,S4  ,femenino,17/08/2025,14,6.93
+10889,"Vera, Ignacio",C02,S1,Masculino,24/08/2023,21,4.12
+10715,"Villalba, Renata",C02,S3  ,m,22/03/2026,29,5.70
+10169,"Lucero, Nicolas",C03,S1,femenino,11/08/2024,17,5.44
+10154,"  Alvarez, Catalina ",C01,S1  ,MASCULINO,26/03/2024,9,7.57
+10437,"  Bustos, Ignacio ",C02,S1,F,24/08/2025,32,7.37
+11142,"Duarte, Martina",C04,S2,FEMENINO,03/03/2026,14,5.13
+10450,"Coronel, Thiago",C01,S1,MASCULINO,03/08/2025,10,6.50
+10028,"Cabrera, Julieta", C04,S3,M,23/03/2025,1,"4,71"
+11367,"Barrios, Bruno",C02,S1,femenino,27/03/2026,17,6.01
+10099,"Zarate, Santino",C03,S4,MASCULINO,26/03/2026,17,4.52
+10625,"Ferreyra, Valentina",C06,S2,M,12/03/2026,21,5.66
+11283,"Alvarez, Mateo",C02,S2,M,07/03/2023,20,
+10238,"  Bustos, Tomas ", C02,S2,Masculino,12/03/2024,15,"5,68"
+10401,"Ojeda, Zoe",C02,S1,Masculino,06/08/2026,18,6.26
+11130,"  Cardozo, Santino ",C06,S1,M,18/08/2023,4,5.84
+10598,"Quiroga, Lautaro",C06,S4  ,m,24/03/2026,9,4.60
+11179,"Segovia, Martina",C01,S1,Femenina,19/08/2025,27,9.28
+10050,"Coronel, Joaquin",C02,S2,masculino,22/03/2024,26,5.96
+11162,"Lucero, Catalina",C01,S2,MASCULINO,02/08/2026,34,8.46
+10913,"Fernandez, Benjamin",C02,S3  ,m,20/03/2024,13,6.55
+11358,"Sosa, Mateo", C06,S1,m,20/08/2025,0,"5,84"
+10063,"Bustos, Renata",C01,S3,Femenina,11/08/2024,32,9.02
+11009,"Barrios, Ignacio", C01,S1,femenino,11/08/2024,15,4.96
+10792,"Ibarra, Zoe",C02,S3,MASCULINO,05/08/2024,26,"4,40"
+10255,"Duarte, Tomas",C02,S3,MASCULINO,17/08/2024,28,"9,40"
+10337,"Coronel, Mia", C02,S1,f,11/08/2025,15,8.15
+10077,"Barrios, Santino",C05,S1,M,01/03/2026,1,8.80
+10161,"Sosa, Guadalupe",C06,S1,femenino,17/03/2023,30,
+10752,"  Sosa, Emma ",C07,S1  ,masculino,23/08/2026,24,4.14
+10605,"Miranda, Sofia",C05,S2,Masculino,24/08/2023,32,7.94
+10274,"Peralta, Renata",C02,S4,Femenino,24/03/2024,13,6.89
+10738,"  Cardozo, Delfina ", C04,S2,m,25/03/2024,8,9.58
+10203,"  Escobar, Ignacio ",C01,S1,masculino,10/08/2025,2,8.47
+11311,"Molina, Abril",C02,S1,m,13/03/2024,31,"7,44"
+10429,"Molina, Abril",C06,S1,M,08/08/2025,29,5.95
+10357,"  Peralta, Isabella ",C04,S1,Femenino,18/03/2023,34,"6,07"
+10938,"Roldan, Nicolas",C01,S1,MASCULINO,22/08/2025,9,8.97
+10913,"Fernandez, Benjamin",C02,S3  ,m,20/03/2024,13,6.55
+11270,"Fernandez, Guadalupe",C03,S1,m,23/08/2026,30,8.09
+10385,"Toledo, Isabella",C99,S3,m,10/08/2024,7,8.38
+10114,"  Paredes, Bautista ", C03,S1,masculino,23/08/2023,16,"7,81"
+10416,"Godoy, Ramiro",C04,S1,Masculino,12/03/2025,14,9.38
+10318,"Ledesma, Catalina",C06,S4  ,Masculino,27/03/2026,8,"6,88"
+10883,"Ojeda, Ignacio", C01,S3,M,14/03/2024,28,"4,27"
+11074,"Silva, Guadalupe", C02,S1,MASCULINO,20/03/2024,21,5.22
+10231,"Roldan, Sofia",C03,S2,FEMENINO,01/03/2025,16,6.85
+10989,"  Barrios, Isabella ",C03,S2,F,27/03/2026,4,6.70
+10812,"Ojeda, Renata", C07,S3,MASCULINO,21/08/2024,32,5.32
+11191,"  Roldan, Joaquin ",C01,S4,MASCULINO,07/08/2024,31,"5,30"
+10660,"Maidana, Camila",C06,S1,M,08/03/2025,11,7.25
+10372,"Acosta, Delfina",C01,S1,femenino,12/03/2026,17,9.68
+11324,"Escobar, Santino",C04,S1,Femenina,06/08/2024,16,4.35
+10071,"  Villalba, Ramiro ", C03,S2,Masculino,10/08/2024,18,"5,26"
+10010,"  Zarate, Bruno ", C04,S1,m,19/03/2026,17,7.55
+10225,"Toledo, Franco",C05,S1  ,f,02/08/2025,3,6.93
+10561,"Rios, Renata",C03,S2,FEMENINO,22/03/2025,5,6.81
+10471,"  Segovia, Martina ", C01,S1,Masculino,14/03/2023,19,"8,15"
+11017,"Alvarez, Abril",C04,S1,MASCULINO,16/08/2026,26,8.25
+10822,"  Fernandez, Emma ",C01,S1,Femenina,10/08/2025,21,5.37
+10511,"  Gimenez, Lucia ",C01,S2  ,Femenina,05/08/2025,26,5.34
+10477,"Toledo, Delfina",C06,S2,f,01/03/2025,1,7.06
+10997,"  Acosta, Emma ",C03,S2,m,10/03/2025,10,4.20
+10533,"Gimenez, Lucia",C06,S1,masculino,25/03/2023,21,7.60
+11225,"Segovia, Tomas",C02,S2,femenino,16/03/2025,3,8.14
+10948,"Ojeda, Lucia",C01,S2,F,15/03/2023,17,5.78
+11108,"Paredes, Emma",C03,S3,masculino,19/03/2026,26,7.77
+10353,"  Lucero, Guadalupe ", C07,S2  ,Femenino,07/08/2026,3,"7,34"
+10198,"Arias, Emma",C02,S3,Femenino,07/08/2025,6,7.89
+10630,"  Ibarra, Agustin ",C02,S2,F,12/08/2023,2,6.01
+10702,"Riquelme, Franco",C01,S4  ,MASCULINO,19/03/2024,0,5.06
+10668,"Barrios, Guadalupe",C06,S1  ,Femenino,01/03/2023,24,87
+11086,"Segovia, Lautaro",C03,S2,M,11/03/2025,16,"7,83"
+10808,"Coronel, Santino",C06,S1,FEMENINO,07/08/2026,27,6.41
+10931,"Rios, Sofia",C01,S2,m,13/03/2023,29,5.97
+11045,"Miranda, Tomas",C06,S1,f,23/03/2023,8,
+10182,"  Peralta, Sofia ", C01,S3,m,20/08/2025,6,9.54
+10850,"Zarate, Bautista",C02,S3,Femenino,02/08/2023,,7.90
+10548,"Nunez, Thiago",C05,S1,M,26/08/2025,23,9.00
+10091,"Miranda, Mateo",C07,S2,FEMENINO,19/08/2025,8,6.21
+11304,"Lucero, Bruno",C02,S1,Femenina,10/08/2026,16,8.03
+10744,"Peralta, Delfina",C02,S1,M,27/03/2026,28,5.40
+10646,"Lucero, Bruno",C01,S3,masculino,21/08/2026,25,"5,19"
+11246,"Paredes, Bautista",C06,S1,MASCULINO,11/03/2024,4,9.71
+10518,"Godoy, Julieta",C05,S2,Masculino,13/08/2026,3,4.57
+10708,"Roldan, Tomas", C01,S1,f,22/03/2023,20,"8,82"
+10219,"Zarate, Lautaro", C06,S3,FEMENINO,22/08/2026,33,45.50
+10980,"Olivera, Renata",C05,S3,MASCULINO,23/03/2026,4,5.92
+10638,"Ponce, Facundo",C04,S1,MASCULINO,08/03/2023,14,9.55
+10442,"Silva, Catalina",C05,S1,Femenina,01/03/2025,3,5.58
+10422,"Gimenez, Lautaro",C01,S1,MASCULINO,16/03/2024,1,9.38
+10721,"Peralta, Santino",C05,S3,Femenino,23/03/2023,32,9.03
+10967,"Fernandez, Franco",C09,S1,FEMENINO,18/03/2023,30,5.55
+10835,"Nunez, Emma", C06,S1,Femenina,06/08/2025,6,8.04
+11170,"Toledo, Santino", C07,S2,MASCULINO,23/03/2023,26,9.49
+11277,"Fernandez, Santino", C07,S1,M,28/08/2025,5,9.30
+11120,"Cardozo, Facundo", C07,S3,F,25/08/2023,,5.41
+10609,"Aguirre, Catalina",C01,S1  ,Femenina,04/08/2026,1,"8,77"
+10455,"Vera, Mia",C06,S3,FEMENINO,28/03/2026,0,"6,26"
+11024,"  Roldan, Julieta ", C01,S1  ,m,19/03/2023,5,8.09
+10381,"Ledesma, Mia",C01,S2  ,m,01/08/2024,5,"4,15"
+10681,"Vera, Valentina",C03,S3  ,M,25/08/2024,25,4.50
+10875,"  Vega, Isabella ",C07,S3,F,07/08/2026,12,8.05
+10288,"Molina, Bruno",C06,S1,F,24/08/2026,21,8.08
+11066,"Ojeda, Abril",C01,S2,f,26/08/2024,11,"8,92"
+10308,"Olivera, Ramiro",C01,S1,m,04/03/2026,22,"6,29"
+10148,"Villalba, Julieta",C01,S3  ,M,17/08/2024,14,8.69
+11199,"  Godoy, Renata ",C07,S2,Femenina,25/03/2025,9,7.07
+10843,"Lucero, Benjamin",C03,S2,Femenino,15/03/2025,24,5.58
+11396,"Arias, Emma",C02,S4,Femenino,19/03/2026,31,6.08
+11263,"Ibarra, Franco",C01,S1,MASCULINO,15/03/2026,13,4.11
+11134,"  Coronel, Valentina ",C02,S1,Masculino,04/08/2026,10,6.22
+10617,"Cabrera, Julieta",C03,S4,Femenina,26/08/2024,,6.20
+11038,"Peralta, Zoe",C06,S2,Femenina,13/08/2023,22,"6,36"
+10122,"  Rios, Delfina ",C01,S3,masculino,14/03/2024,28,5.93
+10766,"Rios, Sofia",C03,S1,masculino,13/03/2026,32,"5,31"
+11354,"Olivera, Agustin", C01,S1,femenino,18/08/2026,24,6.20
+10304,"  Villalba, Lautaro ",C02,S3,Femenino,24/08/2026,26,"8,97"
+10017,"Zarate, Guadalupe",C07,S1,F,02/03/2026,17,5.50
+10920,"Villalba, Julieta",C01,S3,Masculino,26/08/2025,5,"6,61"
+11304,"Lucero, Bruno",C02,S1,Femenina,10/08/2026,16,8.03
+11031,"Vera, Bruno",C04,S1,masculino,12/08/2024,5,"7,89"
+10828,"Ojeda, Guadalupe",C06,S1  ,FEMENINO,14/03/2023,9,"7,08"
+10953,"  Vera, Zoe ",C06,S3,Femenino,15/08/2026,8,4.42
+11094,"  Roldan, Mia ", C07,S3,m,07/03/2025,29,4.22
+11387,"Silva, Bruno", C01,S4,M,25/03/2023,7,5.13

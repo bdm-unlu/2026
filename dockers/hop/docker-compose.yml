@@ -1,0 +1,49 @@
+services:
+
+  # Apache Hop Web: el mismo Hop GUI de escritorio, servido desde un Tomcat.
+  # No hace falta instalar nada en la maquina del alumno, alcanza el navegador.
+  hop:
+    # Se construye una capa fina sobre la imagen oficial: deja el proyecto bdm
+    # como el que abre por omision, y ajusta el usuario interno al dueño de
+    # project/ para que lo que se guarde desde el navegador sea editable desde
+    # el host. Ver el Dockerfile.
+    build: .
+    image: bdm/hop-web:2.19.0
+    container_name: hop
+    ports:
+      # 8090 en el host: adentro Hop Web escucha en el 8080, que ya se lo lleva
+      # eMondrian. Regla del repo: correr los puertos para que los entornos
+      # convivan sin pisarse.
+      - "8090:8080"
+    environment:
+      # Con estas dos el entrypoint registra el proyecto solo, al arrancar.
+      # Ojo: HOP_PROJECT_NAME es obligatoria si se define HOP_PROJECT_FOLDER.
+      HOP_PROJECT_NAME: bdm
+      HOP_PROJECT_FOLDER: /project
+      # La imagen trae -XX:+AggressiveHeap, que le da al JVM toda la memoria del
+      # contenedor. Se acota para que convivan varios entornos en una notebook.
+      # Ojo: hop-run levanta un SEGUNDO JVM adentro del contenedor, asi que el
+      # techo real es el doble de este -Xmx. Con 1g alcanza y sobra para la clase.
+      # El flag de RAP hay que conservarlo: sin el, Hop Web no levanta.
+      HOP_OPTIONS: "-Xms256m -Xmx1g -Dorg.eclipse.rap.rwt.resourceLocation=/tmp/rwt-resources"
+      # Para proyectar en clase: 1.3 o 1.5 agranda toda la interfaz.
+      HOP_GUI_ZOOM_FACTOR: "1.0"
+    # Tope duro de memoria del contenedor. Sin esto, si el JVM se desmadra se
+    # lleva puesta la maquina en vez de fallar el solo.
+    mem_limit: 3g
+    volumes:
+      # Los pipelines, los datos y las salidas viven en el repo, no adentro del
+      # contenedor: lo que se guarda desde el navegador se puede commitear.
+      - ./project:/project
+    healthcheck:
+      # No hay curl ni wget en la imagen. Se usa el /dev/tcp de bash, que es una
+      # extension de bash: hay que invocarlo con "bash -c" y no con CMD-SHELL,
+      # que corre /bin/sh (dash) y no lo soporta.
+      # Se pide una respuesta HTTP y no solo el puerto abierto: Tomcat escucha
+      # antes de terminar de desplegar el webapp.
+      test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/8080 && printf 'GET / HTTP/1.0\\r\\n\\r\\n' >&3 && head -1 <&3 | grep -q HTTP"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    restart: unless-stopped
