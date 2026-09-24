@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Schema name="AlumnosCopo" metamodelVersion="4.0">
+  <PhysicalSchema>
+    <Table name="halumno" schema="bdm">
+      <Key><Column name="id"/></Key>
+    </Table>
+
+    <Table name="dcarrera_copo" schema="bdm" keyColumn="id"/>
+    <Table name="ddepartamento" schema="bdm" keyColumn="id"/>
+    <Link source="ddepartamento" target="dcarrera_copo">
+      <ForeignKey><Column name="id_departamento"/></ForeignKey>
+    </Link>
+
+    <Table name="dsede"   schema="bdm" keyColumn="id"/>
+    <Table name="dsexo"   schema="bdm" keyColumn="id"/>
+    <Table name="dtiempo" schema="bdm" keyColumn="id"/>
+  </PhysicalSchema>
+
+  <Dimension name="Carrera" key="Id">
+    <Attributes>
+      <Attribute name="Id"           table="dcarrera_copo" keyColumn="id"
+                 hasHierarchy="false"/>
+      <Attribute name="Departamento" table="ddepartamento" keyColumn="descripcion"
+                 hasHierarchy="false"/>
+      <Attribute name="Carrera"      table="dcarrera_copo" keyColumn="descripcion"
+                 hasHierarchy="false"/>
+    </Attributes>
+    <Hierarchies>
+      <Hierarchy name="Carreras" allMemberName="Todas las carreras">
+        <Level attribute="Departamento"/>
+        <Level attribute="Carrera"/>
+      </Hierarchy>
+    </Hierarchies>
+  </Dimension>
+
+  <Dimension name="Sede" table="dsede" key="Id">
+    <Attributes>
+      <Attribute name="Id"   keyColumn="id"          hasHierarchy="false"/>
+      <Attribute name="Sede" keyColumn="descripcion" hasHierarchy="false"/>
+    </Attributes>
+    <Hierarchies>
+      <Hierarchy name="Sedes" allMemberName="Todas las sedes">
+        <Level attribute="Sede"/>
+      </Hierarchy>
+    </Hierarchies>
+  </Dimension>
+
+  <Dimension name="Sexo" table="dsexo" key="Id">
+    <Attributes>
+      <Attribute name="Id"   keyColumn="id"          hasHierarchy="false"/>
+      <Attribute name="Sexo" keyColumn="descripcion" hasHierarchy="false"/>
+    </Attributes>
+    <Hierarchies>
+      <Hierarchy name="Sexos" allMemberName="Ambos">
+        <Level attribute="Sexo"/>
+      </Hierarchy>
+    </Hierarchies>
+  </Dimension>
+
+  <Dimension name="Tiempo" table="dtiempo" key="Id" type="TIME">
+    <Attributes>
+      <Attribute name="Id"   keyColumn="id"   hasHierarchy="false"/>
+      <Attribute name="Anio" keyColumn="anio" levelType="TimeYears"
+                 hasHierarchy="false"/>
+      <Attribute name="Cuatrimestre" levelType="TimeQuarters" hasHierarchy="false">
+        <Key>
+          <Column name="anio"/>
+          <Column name="cuatrimestre"/>
+        </Key>
+        <Name><Column name="cuatrimestre"/></Name>
+      </Attribute>
+    </Attributes>
+    <Hierarchies>
+      <Hierarchy name="Periodos" allMemberName="Todos los periodos">
+        <Level attribute="Anio"/>
+        <Level attribute="Cuatrimestre"/>
+      </Hierarchy>
+    </Hierarchies>
+  </Dimension>
+
+  <Cube name="Alumnos">
+    <Dimensions>
+      <Dimension source="Carrera"/>
+      <Dimension source="Sede"/>
+      <Dimension source="Sexo"/>
+      <Dimension source="Tiempo"/>
+    </Dimensions>
+
+    <MeasureGroups>
+      <MeasureGroup name="Alumnos" table="halumno">
+        <Measures>
+          <Measure name="Alumnos" column="id" aggregator="count"
+                   formatString="#,###"/>
+          <Measure name="Materias Aprobadas" column="materias_aprobadas"
+                   aggregator="sum" formatString="#,###"/>
+          <Measure name="Promedio" column="promedio" aggregator="avg"
+                   formatString="#,##0.00"/>
+        </Measures>
+
+        <DimensionLinks>
+          <ForeignKeyLink dimension="Carrera" foreignKeyColumn="id_carrera"/>
+          <ForeignKeyLink dimension="Sede"    foreignKeyColumn="id_sede"/>
+          <ForeignKeyLink dimension="Sexo"    foreignKeyColumn="id_sexo"/>
+          <ForeignKeyLink dimension="Tiempo"  foreignKeyColumn="id_tiempo"/>
+        </DimensionLinks>
+      </MeasureGroup>
+    </MeasureGroups>
+
+    <CalculatedMembers>
+      <CalculatedMember name="Materias por Alumno" dimension="Measures"
+                        formatString="#,##0.0">
+        <Formula>[Measures].[Materias Aprobadas] / [Measures].[Alumnos]</Formula>
+      </CalculatedMember>
+    </CalculatedMembers>
+  </Cube>
+</Schema>

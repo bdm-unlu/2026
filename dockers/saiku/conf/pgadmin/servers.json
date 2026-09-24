@@ -1,0 +1,14 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "DW Alumnos (Saiku)",
+      "Group": "Bases de Datos Masivas",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "bdm",
+      "Username": "bdm",
+      "SSLMode": "prefer",
+      "Comment": "Host y puerto son los de adentro de la red de Docker, no localhost:5471. La clave es bdm y hay que tipearla la primera vez: pgAdmin no permite importar contrasenas."
+    }
+  }
+}

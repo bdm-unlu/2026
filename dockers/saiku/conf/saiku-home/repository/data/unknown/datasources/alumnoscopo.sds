@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+    Datasource OLAP de Saiku: el mismo cubo sobre el modelo copo de nieve.
+
+    Apunta a la MISMA base que alumnos.sds; lo unico que cambia es el Catalog=,
+    o sea el archivo de esquema. Los dos tienen que devolver identico.
+-->
+<dataSource>
+    <driver>mondrian.olap4j.MondrianOlap4jDriver</driver>
+    <id>bdm00001-0000-4000-a000-000000000002</id>
+    <location>jdbc:mondrian:Jdbc=jdbc:postgresql://postgres:5432/bdm;Catalog=file:/app/saiku-home/data/AlumnosCopo4.xml;JdbcDrivers=org.postgresql.Driver;JdbcUser=bdm;JdbcPassword=bdm</location>
+    <name>alumnoscopo</name>
+    <password>bdm</password>
+    <securityenabled>false</securityenabled>
+    <type>OLAP</type>
+    <username>bdm</username>
+</dataSource>

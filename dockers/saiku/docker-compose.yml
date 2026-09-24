@@ -1,0 +1,82 @@
+services:
+
+  # Servidor OLAP de nueva generacion: Mondrian 4.8 (fork de Spicule) con
+  # planner sobre Apache Calcite, mas una interfaz web para armar consultas
+  # arrastrando dimensiones, y un editor visual de cubos.
+  saiku:
+    image: ghcr.io/spiculedata/saiku:4.8.0
+    container_name: saiku
+    ports:
+      - "8095:8080"
+    environment:
+      # Saiku se niega a arrancar con admin/admin si es alcanzable por red, asi
+      # que hay que fijar una clave. Es un entorno de clase en localhost.
+      SAIKU_ADMIN_PASSWORD: bdm
+    volumes:
+      # Solo se montan los archivos propios: el resto del saiku-home lo arma el
+      # launcher en el primer arranque (cache, sesiones, logs, la demo H2).
+      - ./conf/saiku-home/data/Alumnos4.xml:/app/saiku-home/data/Alumnos4.xml:ro
+      - ./conf/saiku-home/data/AlumnosCopo4.xml:/app/saiku-home/data/AlumnosCopo4.xml:ro
+      - ./conf/saiku-home/repository/data/unknown/datasources/alumnos.sds:/app/saiku-home/repository/data/unknown/datasources/alumnos.sds:ro
+      - ./conf/saiku-home/repository/data/unknown/datasources/alumnoscopo.sds:/app/saiku-home/repository/data/unknown/datasources/alumnoscopo.sds:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # El data warehouse. Lo crean los scripts de ./initdb/, que son los mismos que
+  # los de ../emondrian/ (copiados, no montados, para que esta carpeta ande
+  # sola). El setseed(0.42) de 01_star_schema.sql hace que los datos salgan
+  # identicos.
+  postgres:
+    image: postgres:17
+    container_name: saiku_db
+    # Dos formas de ver el SQL que Mondrian genera a partir de un MDX, sin
+    # depender de los logs del servidor OLAP:
+    #
+    #   pg_stat_statements  ->  una TABLA con las consultas recibidas, cuantas
+    #                           veces y cuanto tardaron. Se consulta desde
+    #                           pgAdmin; es la que conviene proyectar.
+    #   log_statement=all   ->  cada consulta al log, para verlas aparecer en
+    #                           vivo:  docker-compose logs -f postgres
+    command:
+      - "postgres"
+      - "-c"
+      - "shared_preload_libraries=pg_stat_statements"
+      - "-c"
+      - "pg_stat_statements.track=all"
+      - "-c"
+      - "log_statement=all"
+    environment:
+      POSTGRES_USER: bdm
+      POSTGRES_PASSWORD: bdm
+      POSTGRES_DB: bdm
+    ports:
+      - "5471:5432"
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bdm -d bdm"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+
+  # Cliente web de PostgreSQL, para mostrar los datos crudos antes de que
+  # exista ningun cubo: las tablas, el diagrama (ERD) y el SQL a mano.
+  pgadmin:
+    image: dpage/pgadmin4:9.18.0
+    container_name: saiku_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: bdm@unlu.edu.ar
+      PGADMIN_DEFAULT_PASSWORD: bdm
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+      PGADMIN_LISTEN_PORT: 8096
+    ports:
+      - "8096:8096"
+    volumes:
+      - ./conf/pgadmin/servers.json:/pgadmin4/servers.json:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped

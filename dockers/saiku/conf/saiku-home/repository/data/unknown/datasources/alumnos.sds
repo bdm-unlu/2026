@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+    Datasource OLAP de Saiku: cubo Alumnos sobre el esquema estrella.
+
+    El <location> es una URL JDBC de Mondrian que encapsula dos cosas:
+      Jdbc=     la conexion real a la base (host "postgres" y puerto 5432 son
+                los de la red de Docker, no localhost:5471)
+      Catalog=  el archivo con el esquema Mondrian 4, dentro del contenedor
+
+    Es el equivalente del <Catalog> de conf/datasources.xml en eMondrian.
+-->
+<dataSource>
+    <driver>mondrian.olap4j.MondrianOlap4jDriver</driver>
+    <id>bdm00001-0000-4000-a000-000000000001</id>
+    <location>jdbc:mondrian:Jdbc=jdbc:postgresql://postgres:5432/bdm;Catalog=file:/app/saiku-home/data/Alumnos4.xml;JdbcDrivers=org.postgresql.Driver;JdbcUser=bdm;JdbcPassword=bdm</location>
+    <name>alumnos</name>
+    <password>bdm</password>
+    <securityenabled>false</securityenabled>
+    <type>OLAP</type>
+    <username>bdm</username>
+</dataSource>
