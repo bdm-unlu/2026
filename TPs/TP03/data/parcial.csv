@@ -1,0 +1,15 @@
+ASISTENCIA,TPS,TRABAJA,MODALIDAD,APRUEBA
+alta,completos,no,presencial,si
+alta,parciales,si,virtual,si
+alta,completos,si,presencial,si
+alta,parciales,no,virtual,si
+baja,completos,no,presencial,no
+baja,parciales,si,presencial,no
+baja,completos,si,virtual,no
+baja,parciales,no,virtual,no
+media,completos,si,presencial,si
+media,completos,no,virtual,si
+media,parciales,no,presencial,si
+media,parciales,si,virtual,no
+media,parciales,si,presencial,no
+media,completos,si,virtual,si
